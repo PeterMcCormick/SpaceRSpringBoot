@@ -6,4 +6,5 @@ public class IssLocation {
     Double Latitude;
     Double Longitude;
 
+
 }
