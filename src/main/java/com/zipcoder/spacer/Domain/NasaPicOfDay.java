@@ -3,14 +3,14 @@ package com.zipcoder.spacer.Domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "nasa_pic_of_the_day)")
+@Table(name = "nasa_pic_of_day")
 public class NasaPicOfDay {
 
     @Id
-    @Column(name = "PIC_ID")
+    @Column(name= "PIC_ID")
     private int picId;
 
-    @Column(name = "COPYRIGHT")
+    @Column(name= "COPYRIGHT")
     private String copyright;
 
     @Column(name= "EXPLANATION")
@@ -22,10 +22,6 @@ public class NasaPicOfDay {
     @Column(name= "LOCATION")
     private String location;
 
-
-    public NasaPicOfDay(int picId, String copyright, String explanation, String title, String location) {
-
-    }
 
     public int getPicId() {
         return picId;

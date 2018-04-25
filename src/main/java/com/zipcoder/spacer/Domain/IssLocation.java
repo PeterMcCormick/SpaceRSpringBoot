@@ -17,11 +17,6 @@ public class IssLocation {
     @Column(name = "LONGITUDE")
     private String longitude;
 
-    public IssLocation(int locationId, Double latitude, Double longitude) {
-
-    }
-
-
     public int getLocationId() {
         return locationId;
     }

@@ -9,7 +9,7 @@ public class RocketLaunch {
 
     @Id
     @Column(name= "LAUNCH_ID")
-    private String launchId;
+    private int launchId;
 
     @Column(name = "ROCKET")
     private String rocket;
@@ -39,17 +39,11 @@ public class RocketLaunch {
     private String padLongitude;
 
 
-//    public RocketLaunch(String launchId, String rocket, String payload, String date, String location,
-//                        String description, String rocketWebpage, String payloadWebPage, String padLatitude,
-//                        String padLongitude) {
-//
-//    }
-
-    public String getLaunchId() {
+    public int getLaunchId() {
         return launchId;
     }
 
-    public void setLaunchId(String launchId) {
+    public void setLaunchId(int launchId) {
         this.launchId = launchId;
     }
 
