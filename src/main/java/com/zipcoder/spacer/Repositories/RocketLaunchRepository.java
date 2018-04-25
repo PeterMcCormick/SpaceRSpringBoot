@@ -1,4 +1,7 @@
 package com.zipcoder.spacer.Repositories;
 
-public class RocketLaunchRepository {
+import com.zipcoder.spacer.Domain.RocketLaunch;
+import org.springframework.data.repository.CrudRepository;
+
+public interface RocketLaunchRepository extends CrudRepository<RocketLaunch, Long> {
 }

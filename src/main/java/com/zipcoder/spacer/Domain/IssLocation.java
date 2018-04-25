@@ -3,11 +3,11 @@ package com.zipcoder.spacer.Domain;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "iss_location")
 public class IssLocation {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "LOCATION_ID")
     private int locationId;
 
@@ -16,11 +16,6 @@ public class IssLocation {
 
     @Column(name = "LONGITUDE")
     private String longitude;
-
-    public IssLocation(int locationId, Double latitude, Double longitude) {
-
-    }
-
 
     public int getLocationId() {
         return locationId;

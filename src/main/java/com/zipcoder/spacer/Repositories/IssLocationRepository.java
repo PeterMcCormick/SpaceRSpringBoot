@@ -1,4 +1,7 @@
 package com.zipcoder.spacer.Repositories;
 
-public class IssLocationRepository {
+import com.zipcoder.spacer.Domain.IssLocation;
+import org.springframework.data.repository.CrudRepository;
+
+public interface IssLocationRepository extends CrudRepository<IssLocation, Long>{
 }
