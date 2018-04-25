@@ -16,11 +16,9 @@ public class PeopleInSpace {
     @Column (name = "SPACE_CRAFT")
     private String craft;
 
-    @Column (name = "WIKI_PAGE")
+    @Column (name = "WIKIPAGE")
     private String wikipage;
 
-   public PeopleInSpace(int personId, String name, String craft, String wikipage) {
-   }
 
    public int getPersonId() {
       return personId;
