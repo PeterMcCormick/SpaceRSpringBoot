@@ -3,10 +3,10 @@ package com.zipcoder.spacer.Domain;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "nasa_pic_of_the_day)")
 public class NasaPicOfDay {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "PIC_ID")
     private int picId;
 

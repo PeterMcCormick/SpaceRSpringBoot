@@ -18,8 +18,7 @@ public class IssLocationService {
 
     }
 
-    public ResponseEntity<IssLocation> getIssLocation() {
-        IssLocation issLocation = issLocationRepository;
+    public ResponseEntity<IssLocation> getIssLocation()
         return new ResponseEntity<>(issLocation, HttpStatus.OK);
     }
 }

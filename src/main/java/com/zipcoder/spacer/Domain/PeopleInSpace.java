@@ -3,10 +3,10 @@ package com.zipcoder.spacer.Domain;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "people_in_space")
 public class PeopleInSpace {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name ="PERSON_ID")
     private int personId;
 

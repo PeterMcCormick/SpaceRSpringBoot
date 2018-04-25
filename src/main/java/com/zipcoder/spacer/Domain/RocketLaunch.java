@@ -4,10 +4,10 @@ package com.zipcoder.spacer.Domain;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "rocket_launch")
 public class RocketLaunch {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name= "LAUNCH_ID")
     private String launchId;
 
@@ -39,11 +39,11 @@ public class RocketLaunch {
     private String padLongitude;
 
 
-    public RocketLaunch(String launchId, String rocket, String payload, String date, String location,
-                        String description, String rocketWebpage, String payloadWebPage, String padLatitude,
-                        String padLongitude) {
-
-    }
+//    public RocketLaunch(String launchId, String rocket, String payload, String date, String location,
+//                        String description, String rocketWebpage, String payloadWebPage, String padLatitude,
+//                        String padLongitude) {
+//
+//    }
 
     public String getLaunchId() {
         return launchId;
