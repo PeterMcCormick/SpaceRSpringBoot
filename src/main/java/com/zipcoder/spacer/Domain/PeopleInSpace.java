@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class PeopleInSpace {
 
     @Id
+    @GeneratedValue
     @Column(name ="PERSON_ID")
     private int personId;
 
