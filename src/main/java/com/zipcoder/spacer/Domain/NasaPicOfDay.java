@@ -1,12 +1,17 @@
 package com.zipcoder.spacer.Domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "nasa_pic_of_day")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class NasaPicOfDay {
 
     @Id
+    @GeneratedValue
     @Column(name= "PIC_ID")
     private int picId;
 
@@ -20,6 +25,7 @@ public class NasaPicOfDay {
     private String title;
 
     @Column(name= "LOCATION")
+    @JsonProperty("hdurl")
     private String location;
 
 
