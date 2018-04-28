@@ -10,6 +10,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +31,7 @@ public class NasaPicOfDayService {
 
     }
 
-    @EventListener(ApplicationReadyEvent.class)
+    @Scheduled(fixedDelay = 3600000)
     public void getNasaPicOfDayFromAPI() {
         HttpEntity entity = new HttpEntity<String>("");
         ResponseEntity<String> responseEntity = restTemplate.exchange("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
