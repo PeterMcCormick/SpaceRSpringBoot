@@ -1,10 +1,14 @@
 package com.zipcoder.spacer.Domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "rocket_launch")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RocketLaunch {
 
     @Id
@@ -37,6 +41,22 @@ public class RocketLaunch {
 
     @Column(name= "PAD_LONGITUDE")
     private String padLongitude;
+
+    public RocketLaunch(){}
+
+    public RocketLaunch(int launchId, String rocket, String rocketWebpage, String payload, String payloadWebPage,
+                        String description, String date, String location, String padLatitude, String padLongitude) {
+        this.launchId = launchId;
+        this.rocket= rocket;
+        this.rocketWebpage = rocketWebpage;
+        this.payload = payload;
+        this.payloadWebPage = payloadWebPage;
+        this.description = description;
+        this.date = date;
+        this.location = location;
+        this.padLatitude = padLatitude;
+        this.padLongitude = padLongitude;
+        }
 
 
     public int getLaunchId() {
@@ -75,9 +95,6 @@ public class RocketLaunch {
         return location;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
 
     public String getDescription() {
         return description;
@@ -118,6 +135,11 @@ public class RocketLaunch {
     public void setPadLongitude(String padLongitude) {
         this.padLongitude = padLongitude;
     }
+
+    public void setlocation(String padLocation) {
+        this.location = padLocation;
+    }
+
 
     @Override
     public String toString() {
